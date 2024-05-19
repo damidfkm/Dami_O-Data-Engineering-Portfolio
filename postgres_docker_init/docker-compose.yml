@@ -1,0 +1,15 @@
+version: '4.30.0'
+
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres_container
+    environment:
+      POSTGRES_USER: damilola_o
+      POSTGRES_PASSWORD: damidami
+      POSTGRES_DB: customers_db
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./infrastructure/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./data:/data
