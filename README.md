@@ -101,8 +101,8 @@ py_gcs_bq/data/yourfile.csv
 python main.py
 ```
 
-Project Structure
-
+### Project Structure
+```
 py_gcs_bq/
 │
 ├── data/
@@ -114,7 +114,7 @@ py_gcs_bq/
 ├── .env
 ├── .env.example
 └── key.json
-
+```
 ### Explanation of Files
 main.py: Main script containing all the functions and logic to interact with GCS and BigQuery.
 config.py: Configuration file to manage environment variables.
@@ -123,6 +123,7 @@ requirements.txt: List of dependencies for the project.
 key.json: Service account key file for Google Cloud authentication (not included in the repository for security reasons).
 
 ### Functions Explained
+```sh
 create_bucket_if_not_exists(bucket_name: str)
 Creates a GCS bucket if it doesn't already exist.
 
@@ -149,7 +150,7 @@ The script ensures idempotency by:
 
 Using WRITE_TRUNCATE as the write_disposition when loading data into BigQuery tables, which overwrites the existing table with new data.
 Checking for the existence of GCS buckets and BigQuery datasets/tables before creating them, avoiding unnecessary re-creation.
-
+```
 
 ### Common Errors and Solutions
 403 Forbidden Error:
