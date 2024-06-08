@@ -1,8 +1,8 @@
-# py_gcs_bq
+# python-gcs-big_query
 
 ## The PROJECT
 
-`py_gcs_bq` is a Python project designed to interact with Google Cloud Storage (GCS) and Google BigQuery. It allows users to:
+`python-gcs-big_query` is a Python project designed to interact with Google Cloud Storage (GCS) and Google BigQuery. It allows users to:
 1. Load flat files in CSV format from their local machine directly into a BigQuery table.
 2. Load data from an API into a GCS bucket as JSON/JSONL and then into a BigQuery table.
 
@@ -55,8 +55,8 @@ The project ensures idempotency, meaning it handles duplicate records effectivel
 ### Step 3: Clone the Repository
 
 ```sh
-git clone https://github.com/your-username/py_gcs_bq.git
-cd py_gcs_bq
+git clone https://github.com/damidfkm/Dami_O-Data-Engineering-Portfolio/edit/python-gcs-big_query/.git
+cd python-gcs-big_query
 ```
 ### Step 4: Set Up a Virtual Environment and Install Dependencies
 Create a Virtual Environment:
@@ -74,8 +74,10 @@ venv\Scripts\activate
 On macOS/Linux:
 ```sh
 source venv/bin/activate
-Install Dependencies:
 ```
+
+### Install Dependencies:
+
 ```sh
 pip install -r requirements.txt
 ```
@@ -116,6 +118,7 @@ py_gcs_bq/
 └── key.json
 ```
 ### Explanation of Files
+
 ```sh
 main.py: Main script containing all the functions and logic to interact with GCS and BigQuery.
 config.py: Configuration file to manage environment variables.
@@ -154,12 +157,13 @@ Checking for the existence of GCS buckets and BigQuery datasets/tables before cr
 ```
 
 ### Common Errors and Solutions
-403 Forbidden Error:
+
+`403 Forbidden Error:`
 Ensure that the service account has the necessary permissions.
 Verify that the roles BigQuery Data Editor, BigQuery Job User, and Storage Admin are assigned to the service account.
 
-File Not Found:
+`File Not Found:`
 Ensure that the key.json file is correctly placed in the project directory and the path in .env is correct.
 
-Dependency Issues:
+`Dependency Issues:`
 Ensure all dependencies are installed by running ```pip install -r requirements.txt.```
