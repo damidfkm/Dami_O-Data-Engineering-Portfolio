@@ -1,0 +1,5 @@
+# Ignore key.json file
+key.json
+
+# Ignore .env file
+.env
