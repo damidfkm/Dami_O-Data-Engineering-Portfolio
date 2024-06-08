@@ -116,12 +116,13 @@ py_gcs_bq/
 └── key.json
 ```
 ### Explanation of Files
+```sh
 main.py: Main script containing all the functions and logic to interact with GCS and BigQuery.
 config.py: Configuration file to manage environment variables.
 requirements.txt: List of dependencies for the project.
 .env.example: Example environment variables file to guide users in setting up their .env file.
 key.json: Service account key file for Google Cloud authentication (not included in the repository for security reasons).
-
+```
 ### Functions Explained
 ```sh
 create_bucket_if_not_exists(bucket_name: str)
